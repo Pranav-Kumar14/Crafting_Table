@@ -1,0 +1,149 @@
+body {
+    font-family: 'Press Start 2P', sans-serif; 
+    background-color: #000000; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-image: url('./images/minecraft.jpg'); 
+    background-size: cover;
+    background-position: center center;
+}
+
+.container {
+    text-align: center;
+    padding: 2.5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1px);
+    border-radius: 12px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+    max-width: 56em;
+    width: 100%;
+}
+
+.crafting-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8em; 
+    margin: 2em 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 6em); 
+    grid-gap: 0.8em;
+    justify-items: center;
+}
+
+.slot, .output-slot {
+    width: 5.6em;
+    height: 5.6em;
+    background-color: #444;
+    border: 3px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.slot:hover, .output-slot:hover {
+    background-color: #555;
+    border-color: #888;
+}
+
+.output-slot {
+    width: 6.25em;
+    height: 6.25em;
+    border-color: gold;
+}
+
+.slot img, .output-slot img {
+    width: 3.125em; 
+    height: 3.125em;
+    object-fit: contain;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    gap: 1.3em;
+    margin-top: 2em;
+}
+
+.material {
+    padding: 0.5em 1em;
+    background-color: #555;
+    border: 1px solid #666;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material img {
+    width: 1.25em; 
+    height: 1.25em;
+}
+
+.material:hover {
+    background-color: #666;
+    transform: scale(1.1);
+}
+
+.material.selected {
+    background-color: #888;
+    transform: scale(1.2);
+}
+
+#craftButton {
+    background-color: #5bc0de;
+    color: #fff;
+    padding: 1em 2em;
+    font-size: 1.25em;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#craftButton:hover {
+    background-color: #31b0d5;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .crafting-table {
+        flex-direction: column;
+        gap: 1.25em;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 4.375em);
+    }
+
+    .slot, .output-slot {
+        width: 4.375em;
+        height: 4.375em;
+    }
+
+    .material {
+        padding: 0.75em 1.12em;
+        font-size: 0.875em;
+    }
+
+    #craftButton {
+        padding: 0.75em 1.12em;
+        font-size: 1em;
+    }
+}
