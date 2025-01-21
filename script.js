@@ -47,9 +47,9 @@ slots.forEach(slot => {
 
 function checkRecipe() {
   const recipes = {
-    'Iron Sword': [null, 'iron', null, null, 'stick', null, null, 'stick', null],
-    'Wooden Pickaxe': ['wood', 'wood', 'wood', null, 'stick', null, null, 'stick', null],
-    'Diamond Pickaxe' : ['diamond', 'diamond', 'diamond', null, 'stick', null, null, 'stick', null]
+    'Diamond Sword': [null, 'diamond', null, null, 'diamond', null, null, 'stick', null],
+    'Bow': [null, 'stick', 'string', 'stick', null, 'string', null, 'stick', 'string'],
+    'Iron Pickaxe' : ['iron', 'iron', 'iron', null, 'stick', null, null, 'stick', null]
   };
 
   const placedItems = Array.from(slots).map(slot => slot.dataset.item || null);
