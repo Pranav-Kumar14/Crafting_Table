@@ -32,8 +32,8 @@ slots.forEach(slot => {
         const img = document.createElement('img');
         img.src = `./images/${selectedMaterial}.png`;
         img.alt = selectedMaterial;
-        img.style.width = '3.125em';
-        img.style.height = '3.125em';
+        img.style.width = '3.124em';
+        img.style.height = '3.124em';
 
         slot.appendChild(img);
         slot.dataset.item = selectedMaterial;
@@ -45,12 +45,30 @@ slots.forEach(slot => {
   });
 });
 
-function checkRecipe() {
+function checkRecipe() {x
   const recipes = {
     'Diamond Sword': [null, 'diamond', null, null, 'diamond', null, null, 'stick', null],
     'Bow': [null, 'stick', 'string', 'stick', null, 'string', null, 'stick', 'string'],
-    'Iron Pickaxe' : ['iron', 'iron', 'iron', null, 'stick', null, null, 'stick', null]
-  };
+    'Iron Pickaxe': ['iron', 'iron', 'iron', null, 'stick', null, null, 'stick', null],
+    'Diamond Pickaxe': ['diamond', 'diamond', 'diamond', null, 'stick', null, null, 'stick', null],
+    'Iron Sword': [null, 'iron', null, null, 'iron', null, null, 'stick', null],
+    'Crossbow': [null, 'stick', 'string', 'iron', 'stick', 'string', null, 'stick', 'iron'],
+    'Diamond Axe': ['diamond', 'diamond', null, 'diamond', 'stick', null, null, 'stick', null],
+    'Iron Axe': ['iron', 'iron', null, 'iron', 'stick', null, null, 'stick', null],
+    'Diamond Shovel': [null, 'diamond', null, null, 'stick', null, null, 'stick', null],
+    'Iron Shovel': [null, 'iron', null, null, 'stick', null, null, 'stick', null],
+    'Diamond Hoe': ['diamond', 'diamond', null, null, 'stick', null, null, 'stick', null],
+    'Iron Hoe': ['iron', 'iron', null, null, 'stick', null, null, 'stick', null],
+    'Diamond Helmet': ['diamond', 'diamond', 'diamond', 'diamond', null, 'diamond', null, null, null],
+    'Iron Helmet': ['iron', 'iron', 'iron', 'iron', null, 'iron', null, null, null],
+    'Diamond Chestplate': ['diamond', null, 'diamond', 'diamond', 'diamond', 'diamond', 'diamond', 'diamond', 'diamond'],
+    'Iron Chestplate': ['iron', null, 'iron', 'iron', 'iron', 'iron', 'iron', 'iron', 'iron'],
+    'Diamond Leggings': ['diamond', 'diamond', 'diamond', 'diamond', null, 'diamond', 'diamond', null, 'diamond'],
+    'Iron Leggings': ['iron', 'iron', 'iron', 'iron', null, 'iron', 'iron', null, 'iron'],
+    'Diamond Boots': [null, null, null, 'diamond', null, 'diamond', 'diamond', null, 'diamond'],
+    'Iron Boots': [null, null, null, 'iron', null, 'iron', 'iron', null, 'iron']
+};
+
 
   const placedItems = Array.from(slots).map(slot => slot.dataset.item || null);
 
