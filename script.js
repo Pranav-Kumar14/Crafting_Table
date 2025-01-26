@@ -45,7 +45,7 @@ slots.forEach(slot => {
   });
 });
 
-function checkRecipe() {x
+function checkRecipe() {
   const recipes = {
     'Diamond Sword': [null, 'diamond', null, null, 'diamond', null, null, 'stick', null],
     'Bow': [null, 'stick', 'string', 'stick', null, 'string', null, 'stick', 'string'],
