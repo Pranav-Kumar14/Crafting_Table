@@ -2,6 +2,7 @@ const slots = document.querySelectorAll('.slot');
 const materials = document.querySelectorAll('.material');
 const outputSlot = document.querySelector('.output-slot');
 const craftButton = document.getElementById('craftButton');
+const clearButton = document.getElementById('clearButton');
 
 let selectedMaterial = null;
 
@@ -94,4 +95,8 @@ function checkRecipe() {
 
 craftButton.addEventListener('click', () => {
   checkRecipe(); 
+});
+
+clearButton.addEventListener('click', () => {
+  clearCraftingTable(); 
 });
